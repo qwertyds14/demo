@@ -1,0 +1,46 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:DemoExam.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="DemoExam.Views.LoginWindow"
+        x:DataType="vm:LoginWindowViewModel"
+        Icon="/Assets/Images/Icon.ico"
+        MinHeight="450"
+        MinWidth="800"
+        FontFamily="Calibri"
+        Title="Окно авторизации">
+
+    <Grid ShowGridLines="True">
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Spacing="10">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Spacing="10">
+                <Image Source="/Assets/Images/Icon.png"
+                       MaxHeight="100"
+                       VerticalAlignment="Center"
+                       Stretch="Uniform"/>
+		        <TextBlock Text="Чудо Обувь"
+                           VerticalAlignment="Center"
+                           FontSize="25"
+                           FontWeight="Bold"/>			
+            </StackPanel>
+            <TextBox PlaceholderText="Логин:"
+                     Name="LoginBox"
+                     MaxWidth="200"
+                     Background="#D2F6E7"/>
+            <Button Content="Войти"
+                    Background="#70B2AF"
+                    HorizontalAlignment="Center"
+                    Click="Login_Click"/>
+            <Button Content="Войти как гость"
+                    Background="#70B2AF"
+                    HorizontalAlignment="Center"
+                    Click="Guest_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

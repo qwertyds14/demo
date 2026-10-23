@@ -1,0 +1,71 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="DemoExam.AdminWindow"
+        Icon="/Assets/Images/Icon.ico"
+        MinHeight="450"
+        MinWidth="800"
+        FontFamily="Calibri"
+        x:CompileBindings="False"
+        Title="Главное меню администратора">
+    <Grid ShowGridLines="False"
+          ColumnDefinitions="Auto, 15*, Auto"
+          RowDefinitions="Auto, Auto, 8*, Auto"
+          Margin="10">
+        <StackPanel Spacing="10"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Grid.Row="0"
+                    Grid.Column="1">
+			<Image Source="/Assets/Images/Icon.png"
+                   VerticalAlignment="Center"
+                   MaxHeight="100"
+                   Stretch="Uniform"/>
+            <TextBlock Text="Чудо Обувь"
+                       VerticalAlignment="Center"
+                       FontWeight="Bold"
+                       FontSize="25"/>
+        </StackPanel>
+        <TextBlock Text="ФИО"
+                   Grid.Row="0"
+                   Grid.Column="2"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Top"
+                   FontWeight="Bold"
+                   Name="FIO"/>
+        <StackPanel Orientation="Horizontal"
+                    Spacing="10"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <TextBox PlaceholderText="Поиск..."
+                 Background="#D2F6E7"
+                 Width="300"
+                 Name="SearchBox"
+                 KeyUp="SearchBox_KeyUp"/>
+            <DropDownButton Content="Фильтр"
+                            Background="#70B2AF"/>
+            <DropDownButton Content="Сортировка"
+                            Background="#70B2AF"/>
+        </StackPanel>
+        <Button Content="Заказ"
+                Grid.Column="2"
+                Grid.Row="1"
+                Background="#70B2AF"
+                HorizontalAlignment="Center"/>
+        <ListBox Grid.Row="2"
+                 Grid.Column="1">
+        </ListBox>
+        <Button Content="Выйти"
+                Grid.Column="0"
+                Grid.Row="3"
+                Background="#70B2AF"
+                Click="Exit_Click"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>
